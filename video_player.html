@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="icon" type="image/svg" href="img\video-player.png">
+  <title>Black View</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Tag -->
+  <div class="header">
+    <div class="logo-con">
+      <i id="toggleImage" class="ri-menu-line"></i>
+      <div class="logo">
+        <div class="logo-img">
+          <img src="img\video-player.png" alt="">
+        </div>
+        <h1 id="logo-title">BLACKVIEW</h1>
+    </div></div>
+    <div onclick="alert('Sorry...Feature Not Available...Will be Updated Soon...')" class="profile-con">
+      <i class="ri-notification-4-line"></i>
+      <div class="profile-box">
+        <i class="ri-user-line"></i>
+      </div>
+  </div>
+  </div>
+  <!-- Side Bar -->
+<div class="body-con">
+  <div id="toggleDiv" class="side-bar">
+    <div class="slides">
+      <a href="index.html" class="slide" id="home">HOME</a>
+      <a href="" class="slide" onclick="alert('Sorry...Feature Not Available...Will be Updated Soon...')">Categories</a>
+      <a href="" class="slide"onclick="alert('Sorry...Feature Not Available...Will be Updated Soon...')">Treasured</a>
+      <a href="" class="slide"onclick="alert('Sorry...Feature Not Available...Will be Updated Soon...')">History</a>
+      <hr>
+      <!--<p class="sign">Sign in to like videos, comment, and subscribe.</p>
+      <a href="index.html" class="signin">Sign in</a>
+      <hr>-->
+      <a href="index.html" class="slide" onclick="alert('Sorry...Feature Not Available...Will be Updated Soon...')">Settings</a>
+      <hr>
+      <p class="sign">Link with me on...</p>
+      <a href="https://github.com/Kowsik-Y"class="slide">Github</a>
+      <a href="https://www.linkedin.com/in/kowsik-y-49683a296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="slide">Linkedin</a>
+      <a href="https://github.com/Kowsik-Y/Black-View/issues/new/choose" class="slide">Any Issues</a>
+    </div>
+  </div>
+
+<div class="contentvid-player">
+    <video id="myVideo" type="video/mp4" controls>
+    <source  type="video/mp4">
+    </video>
+    <div class="inst"><h3 class="h"> * If Video is Not Loading or Not Showing...Please...Reload or Use Other Broswer...</h3></div>
+  <div class="instm"><h3 class="h">* If  Controls are Not Wroking or Not Showing...Please...Reload or Use Other Broswer...</h3></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggleImage = document.getElementById('toggleImage');
+        var toggleDiv = document.getElementById('toggleDiv');
+    
+        // Function to check if the current device is mobile
+        function isMobile() {
+            return window.innerWidth <= 767;
+        }
+    
+        // Function to set initial visibility based on device type
+        function setInitialVisibility() {
+            if (isMobile()) {
+                toggleDiv.classList.add('side-bar');
+            } else {
+                toggleDiv.classList.remove('side-bar');
+            }
+        }
+    
+        // Initial setup
+        setInitialVisibility();
+    
+        // Add click event listener to the image to toggle div visibility on mobile
+        toggleImage.addEventListener('click', function() {
+            if (isMobile()) {
+                toggleDiv.classList.toggle('side-bar');
+            }
+        });
+    
+        // Adjust visibility when the window is resized
+        window.addEventListener('resize', function() {
+            setInitialVisibility();
+        });
+    });
+
+const urlParams = new URLSearchParams(window.location.search);
+const videoUrl = urlParams.get('videoUrl');
+
+const videoElement = document.getElementById('myVideo');
+
+if (videoUrl) {
+  videoElement.src = videoUrl;
+  videoElement.load();
+} else {
+}
+  </script>
+</body>
+</html>
