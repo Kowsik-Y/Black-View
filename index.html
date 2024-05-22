@@ -200,12 +200,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var toggleImage = document.getElementById('toggleImage');
     var toggleDiv = document.getElementById('toggleDiv');
 
-    // Function to check if the current device is mobile
+    
     function isMobile() {
         return window.innerWidth <= 767;
     }
 
-    // Function to set initial visibility based on device type
     function setInitialVisibility() {
         if (isMobile()) {
             toggleDiv.classList.add('side-bar');
@@ -213,18 +212,14 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleDiv.classList.remove('side-bar');
         }
     }
-
-    // Initial setup
-    setInitialVisibility();
-
-    // Add click event listener to the image to toggle div visibility on mobile
+mobile
     toggleImage.addEventListener('click', function() {
         if (isMobile()) {
             toggleDiv.classList.toggle('side-bar');
         }
     });
 
-    // Adjust visibility when the window is resized
+    
     window.addEventListener('resize', function() {
         setInitialVisibility();
     });
