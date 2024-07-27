@@ -73,7 +73,6 @@ fetch('data.json')
                 for (let i = 0; i < data.length; i++) {
                     const info = data[i];
                     Template += `
-                        <div>
                           <a href="video_player.html?videoUrl=${info.link}" class="vid-link">
     <div class="vid-cover"><img id="tem" src="${info.image}" alt="">
     </div>
