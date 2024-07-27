@@ -245,23 +245,5 @@ document.addEventListener('DOMContentLoaded', function() {
   if (window.location.search.slice(1) === '') {
   }
 </script>
- <h1>Person Info</h1>
-    <div id="person"></div>
-
-    <script>
-        // Step 3: Fetch the JSON data
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                // Step 4: Process and display the data
-                const personDiv = document.getElementById('person');
-                personDiv.innerHTML = `
-                    <p>Name: ${data.name}</p>
-                    <p>Age: ${data.age}</p>
-                    <p>City: ${data.city}</p>
-                `;
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
 </body>
 </html>
