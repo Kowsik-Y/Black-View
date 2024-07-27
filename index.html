@@ -73,8 +73,7 @@ fetch('data.json')
                     const info = data[i];
                     Template += `
                         <div>
-                          <a href="video_player.html?videoUrl=${info.link}" class="vid-link">
-    <div class="vid-cover"><img id="tem" src="${info.image}" alt="">
+                         
     </div>
     <div class="video-detail">
       <h3 >${info.name}</h3>
@@ -86,7 +85,7 @@ fetch('data.json')
         <p class="date">${info.month} ${info.year}</p>
       </div>
     </div>
-  </a></div>
+  </div>
                     `;
               }
                 overall-videoDiv.innerHTML = Template;
