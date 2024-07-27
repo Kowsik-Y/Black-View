@@ -65,36 +65,6 @@
   <!--VIDEO LINK END TAG-->
 
 <script>
-fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const overall-videoDiv = document.getElementById('overall-video');
-                let html = '';
-                for (let i = 0; i < data.length; i++) {
-                    const info = data[i];
-                    Template += `
-                          <a href="video_player.html?videoUrl=${info.link}" class="vid-link">
-    <div class="vid-cover"><img id="tem" src="${info.image}" alt="">
-    </div>
-    <div class="video-detail">
-      <h3 >${info.name}</h3>
-      <div class="dateimd">
-        <p class="theme">${info.theme}</p>
-        ‧ 
-        <p class="hrs">${info.time}</p>
-        ‧ 
-        <p class="date">${info.month} ${info.year}</p>
-      </div>
-    </div>
-  </a>
-                   `;
-              }
-                overall-videoDiv.innerHTML = Template;
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
-
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     var toggleImage = document.getElementById('toggleImage');
     var toggleDiv = document.getElementById('toggleDiv');
@@ -126,6 +96,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (window.location.search.slice(1) === '') {
   }
+fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const overall-videoDiv = document.getElementById('overall-video');
+                let html = '';
+                for (let i = 0; i < data.length; i++) {
+                    const info = data[i];
+                    Template += `
+                          <div><a href="" class="vid-link">
+    <div class="vid-cover"><img id="tem" src="" alt="">
+    </div>
+    <div class="video-detail">
+      <h3 >${info.name}</h3>
+      <div class="dateimd">
+        <p class="theme">${info.theme}</p>
+        ‧ 
+        <p class="hrs">${info.time}</p>
+        ‧ 
+        <p class="date">${info.month} ${info.year}</p>
+      </div>
+    </div>
+  </a></div>
+                   `;
+              }
+                overall-videoDiv.innerHTML = Template;
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
 </script>
 </body>
 </html>
