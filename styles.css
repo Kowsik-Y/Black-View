@@ -155,10 +155,10 @@ hr{
 }
 .overall-video{
  display: flex;
- flex-wrap: wrap;   
+ flex-wrap: wrap; 
+height:fit-content;  
 overflow-y: auto;
 padding-left: 10px;
-height:fit-content;
 padding-bottom:15px
 }
 .vid{
