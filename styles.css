@@ -231,6 +231,8 @@ h3{
 display: grid;
 width: 350px;
 overflow-y: auto;
+margin-bottom: 40px;
+padding-bottom:40px;
 padding-left: 10px;
  }
  .vid{
