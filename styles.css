@@ -158,6 +158,8 @@ hr{
  flex-wrap: wrap;   
 overflow-y: auto;
 padding-left: 10px;
+height:fit-content;
+padding-bottom:15px
 }
 .vid{
   flex: 0 0 25%;
