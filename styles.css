@@ -156,7 +156,6 @@ hr{
 .overall-video{
  display: flex;
  flex-wrap: wrap; 
-height:auto;  
 overflow-y: auto;
 padding-left: 10px;
 padding-bottom:15px
