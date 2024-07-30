@@ -234,4 +234,8 @@ padding-left: 10px;
  .vid{
   width: 100%;
   padding: 10px;
- }
+ }
+#myvideo{
+width:fit-content;
+height: fit-content;
+}
