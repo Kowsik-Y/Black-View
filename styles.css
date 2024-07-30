@@ -217,6 +217,11 @@ h3{
   position: relative;
   display: block;
 }
+.myVideo{
+height:75%;
+width: 80%;
+ padding: 10px;
+}
 /* Hide the div on mobile devices initially */
 @media screen and (max-width: 767px) {
   #toggleDiv.side-bar {
@@ -235,9 +240,8 @@ padding-left: 10px;
   width: 100%;
   padding: 10px;
  }
-.contentvideo{
-width: 70%;
-height:60%;
+.myVideo{
+height:auto;
  padding: 10px;
 }
 }
