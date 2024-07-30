@@ -235,8 +235,9 @@ padding-left: 10px;
   width: 100%;
   padding: 10px;
  }
-#myVideo{
-width:fit-content;
-height: fit-content;
+.contentvideo{
+width: 70%;
+height:60%;
+ padding: 10px;
 }
 }
