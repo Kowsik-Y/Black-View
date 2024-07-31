@@ -102,7 +102,7 @@ hr{
   
 }
 #toggleDiv{
-  width: 40%;
+  width: 300px;
 }
 .side-bar{
   padding-top: 10px;
@@ -197,7 +197,7 @@ h3{
   position: grid;
   justify-content: center;
   margin-bottom: 50px;
-  width: fit-content;
+  width: 500px;
   margin-left: 0;
 }
 
