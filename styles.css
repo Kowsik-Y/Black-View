@@ -199,8 +199,8 @@ h3{
   justify-content: center;
   overflow: hidden;
   margin-bottom: 50px;
-  width: 70%;
-  height:70%;
+  width: fit-content;
+  height: fit-content;
   margin-left: 0;
 }
 .h{
