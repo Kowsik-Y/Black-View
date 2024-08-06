@@ -32,12 +32,12 @@ hr{
   height: 50px;
   position: fixed;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1rem 0;
 }
 .logo-con{
   display: flex;
-  width: 100%;
+  width: 40%;
   height: 100%;
   margin-left: 15px;
   align-items: center;
@@ -53,7 +53,8 @@ hr{
   cursor: pointer;
 }
 .search-con{
-  display: none;
+  display:flex;
+  width: 40%;
   align-items: center;
   justify-content: center;
   justify-self: center;
@@ -61,7 +62,7 @@ hr{
 }
 .profile-con{
   display: flex;
-  width: 100%;
+  width: 20%;
   height: 100%;
   margin-right: 15px;
   align-items: center;
@@ -74,23 +75,43 @@ hr{
   width: 25px;
   height: 25px;
 }
-
+.searchbox{
+  width: 80%;
+}
 .search{
-  height: 100%;
-  border: 1px solid rgb(173, 160, 160);
+  width: 10%;
+  height: 30px;
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid rgb(137, 151, 155);
+  transition: border-color 150ms ease-in-out 0s;
+  outline: none;
+  color: rgb(33, 49, 60);
+  background-color: rgb(255, 255, 255);
+  padding: 3px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
 }
-#serion{
-  font-size: 1.5em;
-}
 .search-con input{
-  height: 100%;
-  width: 10em;
-  border: 1px solid rgb(173, 160, 160);
-  padding: 3px;
+width: 100%;
+height: 30px;
+padding-left: 12px;
+font-size: 14px;
+font-weight: normal;
+border: 1px solid rgb(137, 151, 155);
+transition: border-color 150ms ease-in-out 0s;
+outline: none;
+color: rgb(33, 49, 60);
+background-color: rgb(255, 255, 255);
+padding: 10px;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
+  border-right: none;
+}
+.search-con:hover{
+  box-shadow: rgb(231 238 236) 0px 0px 0px 2px;
+  border-radius: 7px;
 }
 .body-con{
   display: flex;
@@ -102,7 +123,7 @@ hr{
   
 }
 #toggleDiv{
-  width: 150px;
+  width:350px;
 }
 .side-bar{
   padding-top: 10px;
@@ -155,15 +176,15 @@ hr{
 }
 .overall-video{
  display: flex;
- flex-wrap: wrap; 
-overflow-y: auto;
-padding-left: 10px;
-margin-bottom: 40px;
-padding-bottom:40px;
+ width: 100%;
+ flex-wrap: wrap;
+ overflow-y: auto;
+ gap: 20px;
+ margin-bottom: 70px;
 }
 .vid{
-  flex: 0 0 25%;
-  box-sizing: border-box;
+  flex: 3 0 250px;
+  width: 250px;
   padding: 10px;
 }
 .vid-cover img{
@@ -196,11 +217,14 @@ h3{
 .contentvid-player{
   position: grid;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
-  width: 500px;
-  margin-left: 0;
+  width: 100%;
+  
 }
-
+.contentvideo{
+  margin-left: 60px;
+}
 .h{
   color: red;
   width: 100%;
@@ -216,26 +240,29 @@ h3{
   display: block;
 }
 #myVideo {
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+  width:90%;
+  height: 50%;
 }
 /* Hide the div on mobile devices initially */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 780px) {
   #toggleDiv.side-bar {
     transition:ease-in-out;
       display: none;
 }
 .overall-video{
 display: grid;
-width: 350px;
 overflow-y: auto;
-margin-bottom: 40px;
-padding-bottom:40px;
-padding-left: 10px;
  }
+
  .vid{
   width: 100%;
   padding: 10px;
  }
+ .search{
+  width: 20%;
 }
+ 
+}
+
+
+
